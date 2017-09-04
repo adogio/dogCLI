@@ -2,7 +2,6 @@
 
 int main()
 {
-	std::cout << "This is a native C++ program." << std::endl;
-	printf("printf: Hello World");
+	printf("printf: Hello World\n");
 	return 0;
 }

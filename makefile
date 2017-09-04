@@ -1,12 +1,13 @@
 SRC := src/
 DIST := dist/
 
-edit : main.o
-	echo main.o
+edit : Test
 
-main.o : $(SRC)main.cc
-	 gcc -c $(SRC)main.cc
-	 echo 1
+Test : $(SRC)main.cc
+	 gcc -o $(DIST)Test $(SRC)main.cc -Wall -Werror
 
 clean : 
-	rm edit main.o
+	rm *.o $(DIST)Test
+
+run :
+	./$(DIST)Test
