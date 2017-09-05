@@ -1,9 +1,9 @@
 SRC := src/
 DIST := dist/
-DOGUICLI := $(DIST)doguiCLI
+DOGCLI := $(DIST)dogCLI
 
-doguiCLI : main.o build.o
-	g++ -o $(DOGUICLI) $(DIST)main.o $(DIST)build.o
+dogCLI : main.o build.o
+	g++ -o $(DOGCLI) $(DIST)main.o $(DIST)build.o
 
 main.o: $(SRC)main.cc $(SRC)file/build.h 
 	g++ -c -o $(DIST)main.o $(SRC)main.cc
@@ -16,8 +16,8 @@ ifeq ($(OS),Windows_NT)
 	cd dist && del *.o
 	cd dist && del doguiCLI.exe
 else
-	rm *.o $(DOGUICLI)
+	rm *.o $(DOGCLI)
 endif
 
 run :
-	./$(DOGUICLI)
+	./$(DOGCLI)
