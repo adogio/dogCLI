@@ -11,3 +11,6 @@
 
 "postinstall": "echo adog.io :D",
 "postinstall": "echo switching os option :D",
+
+C:\Users\Meng Wang\AppData\Roaming\npm\dog -> C:\Users\Meng Wang\AppData\Roaming\npm\node_modules\dogcli\main.js
+C:\Users\Meng Wang\AppData\Roaming\npm\node_modules\dogcli -> F:\Github\dogui-cli
