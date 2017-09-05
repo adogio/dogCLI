@@ -14,7 +14,6 @@ switch (os.platform()) {
 }
 
 
-
 for (let i = 0; i < process.argv.length; i++) {
     execScript += process.argv[i];
 }

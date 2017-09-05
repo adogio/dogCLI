@@ -1,20 +1,27 @@
 SRC := src/
 DIST := dist/
 DOGCLI := $(DIST)dogCLI
+GPP := g++ -c -o
 
-dogCLI : main.o build.o
-	g++ -o $(DOGCLI) $(DIST)main.o $(DIST)build.o
+dogCLI : main.o build.o dog.o args.o
+	g++ -o $(DOGCLI) $(DIST)main.o $(DIST)build.o $(DIST)dog.o $(DIST)args.o
 
 main.o: $(SRC)main.cc $(SRC)file/build.h 
-	g++ -c -o $(DIST)main.o $(SRC)main.cc
+	$(GPP) $(DIST)main.o $(SRC)main.cc
 
 build.o: $(SRC)file/build.cc
-	g++ -c -o $(DIST)build.o $(SRC)file/build.cc
+	$(GPP) $(DIST)build.o $(SRC)file/build.cc
+
+dog.o: $(SRC)dog/dog.cc
+	$(GPP) $(DIST)dog.o $(SRC)dog/dog.cc
+
+args.o: $(SRC)dog/args.cc
+	$(GPP) $(DIST)args.o $(SRC)dog/args.cc
 
 clean :
 ifeq ($(OS),Windows_NT)
-	cd dist && del $(DIST)*.o
-	cd dist && del doguiCLI.exe
+	cd dist && del *.o
+	cd dist && del dogCLI.exe
 else
 	rm $(DIST)*.o $(DOGCLI)
 endif
