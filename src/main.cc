@@ -3,7 +3,7 @@
 int main()
 {
 	build *t = new build();
-	printf("printf: Hello World\n%d", t->add());
+	printf("printf: Hello World%d\n", t->add());
 	delete t;
 	return 0;
 }

@@ -13,10 +13,10 @@ build.o: $(SRC)file/build.cc
 
 clean :
 ifeq ($(OS),Windows_NT)
-	cd dist && del *.o
+	cd dist && del $(DIST)*.o
 	cd dist && del doguiCLI.exe
 else
-	rm *.o $(DOGCLI)
+	rm $(DIST)*.o $(DOGCLI)
 endif
 
 run :

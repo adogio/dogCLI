@@ -1,6 +1,6 @@
 #include "build.h"
 
-build::add()
+int build::add()
 {
   return this->i;
 }
