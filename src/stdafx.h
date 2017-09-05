@@ -6,6 +6,8 @@
 #pragma once
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
+#include "./file/build.h"
 
 // TODO: 在此处引用程序需要的其他头文件

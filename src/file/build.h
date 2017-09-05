@@ -3,9 +3,12 @@
 
 class build
 {
+private:
+  int i;
+
 public:
-    build():{}
-    void ddd();
-}
+  build() : i(55){};
+  int add();
+};
 
 #endif
