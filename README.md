@@ -6,5 +6,6 @@
 To remove the package do 
 
 ```bash
-rm '/usr/local/lib/node_modules/dogcli'
+sudo rm /usr/local/lib/node_modules/dogcli
+sudo rm /usr/local/bin/dog
 ```

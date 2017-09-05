@@ -1,0 +1,13 @@
+"name": "dogcli",
+"name": "dogcli-win32",
+"name": "dogcli-linux",
+
+"os": ["linux"],
+"os": ["win32"],
+
+"bin": {
+ "dog": "./dist/dogCLI"
+},
+
+"postinstall": "echo adog.io :D",
+"postinstall": "echo switching os option :D",

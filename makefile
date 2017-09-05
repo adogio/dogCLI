@@ -21,3 +21,7 @@ endif
 
 run :
 	./$(DOGCLI)
+
+gyp :
+	node-gyp configure
+	node-gyp build
