@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	}
 	build *t = new build();
 	dog *d = new dog();
-	std::cout << d->add() << std::endl;
+	std::cout << ":D --- " << d->add() << std::endl;
 	delete t;
 	delete d;
 	return 0;

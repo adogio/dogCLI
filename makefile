@@ -1,10 +1,12 @@
 SRC := src/
 DIST := dist/
-DOGCLI := $(DIST)dogCLI
+SN := $(shell uname)
+DOGCLI := $(DIST)$(SN)-dogCLI
 GPP := g++ -c -o
 
 dogCLI : main.o build.o dog.o args.o
 	g++ -o $(DOGCLI) $(DIST)main.o $(DIST)build.o $(DIST)dog.o $(DIST)args.o
+	make co
 
 main.o: $(SRC)main.cc $(SRC)file/build.h 
 	$(GPP) $(DIST)main.o $(SRC)main.cc
@@ -17,6 +19,12 @@ dog.o: $(SRC)dog/dog.cc
 
 args.o: $(SRC)dog/args.cc
 	$(GPP) $(DIST)args.o $(SRC)dog/args.cc
+co :
+ifeq ($(OS),Windows_NT)
+	cd dist && del *.o
+else
+	rm $(DIST)*.o
+endif
 
 clean :
 ifeq ($(OS),Windows_NT)
@@ -32,3 +40,6 @@ run :
 gyp :
 	node-gyp configure
 	node-gyp build
+
+os :
+	echo $(shell uname)

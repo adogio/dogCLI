@@ -6,7 +6,7 @@ let execScript = "";
 switch (os.platform()) {
     case "linux":
     case "darwin":
-        execScript += "./dist/dogCLI ";
+        execScript += "./dist/Darwin-dogCLI ";
         break;
     case "win32":
         execScript += ".\\dist\\dogCLI.exe ";
